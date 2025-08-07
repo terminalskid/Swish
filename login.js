@@ -3,7 +3,7 @@ function isStandalone() {
   return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
 }
 if (!(window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone)) {
-  window.location.href = "/addtohome.html";
+  window.location.href = "/userapp.html";
 }
 function login() {
   const _0x22c2e1 = document.getElementById("code").value.trim().toUpperCase();
