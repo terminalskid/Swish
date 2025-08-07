@@ -1,4 +1,4 @@
-const codeList = "\n  0JWYWKV03DXB\n  CODE12345678\n  MYSECRETLOGIN\n VINCENT\n KOD123\".trim().split("\n").map(_0xb0192 => _0xb0192.trim());
+const codeList = "\n  0JWYWKV03DXB\n  CODE12345678\n  MYSECRETLOGIN\n VINCENT\n KOD123\n".trim().split("\n").map(_0xb0192 => _0xb0192.trim());
 function isStandalone() {
   return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
 }
