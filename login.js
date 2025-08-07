@@ -1,1 +1,27 @@
-const _0xd7ffd7=_0x1e2c;(function(_0xd90198,_0x4c085a){const _0xdd6df6=_0x1e2c,_0x460e73=_0xd90198();while(!![]){try{const _0xf73fc7=-parseInt(_0xdd6df6(0x185))/0x1+-parseInt(_0xdd6df6(0x18d))/0x2*(-parseInt(_0xdd6df6(0x175))/0x3)+-parseInt(_0xdd6df6(0x190))/0x4*(-parseInt(_0xdd6df6(0x176))/0x5)+-parseInt(_0xdd6df6(0x186))/0x6+-parseInt(_0xdd6df6(0x17d))/0x7*(-parseInt(_0xdd6df6(0x184))/0x8)+-parseInt(_0xdd6df6(0x179))/0x9*(-parseInt(_0xdd6df6(0x18a))/0xa)+-parseInt(_0xdd6df6(0x18e))/0xb*(parseInt(_0xdd6df6(0x17a))/0xc);if(_0xf73fc7===_0x4c085a)break;else _0x460e73['push'](_0x460e73['shift']());}catch(_0x5acf83){_0x460e73['push'](_0x460e73['shift']());}}}(_0x28c0,0x3c920));function _0x28c0(){const _0x473260=['100cNjRbE','trim','/addtohome.html','block','/appuser.html','includes','map','error','17331grUsii','21395uEFIio','matches','(display-mode:\x20standalone)','965259veqXIS','12QZuXUl','navigator','display','7HWOnUf','device_lock_','style','value','toUpperCase','This\x20code\x20is\x20already\x20used\x20on\x20another\x20device.','code','1227664lKpTpY','455778RDwvPD','191718TdBivC','getElementById','setItem','innerText','40qlkplG','href','split','86OdnqDZ','2222231YJGXGU','userAgent'];_0x28c0=function(){return _0x473260;};return _0x28c0();}function _0x1e2c(_0x47a607,_0x4556aa){const _0x28c01c=_0x28c0();return _0x1e2c=function(_0x1e2c61,_0x5acbea){_0x1e2c61=_0x1e2c61-0x172;let _0x2aeeba=_0x28c01c[_0x1e2c61];return _0x2aeeba;},_0x1e2c(_0x47a607,_0x4556aa);}const codeList='\x0a\x20\x200JWYWKV03DXB\x0a\x20\x20CODE12345678\x0a\x20\x20MYSECRETLOGIN\x0a'[_0xd7ffd7(0x191)]()[_0xd7ffd7(0x18c)]('\x0a')[_0xd7ffd7(0x173)](_0xb0192=>_0xb0192['trim']());function isStandalone(){const _0x23d81f=_0xd7ffd7;return window['matchMedia'](_0x23d81f(0x178))[_0x23d81f(0x177)]||window[_0x23d81f(0x17b)]['standalone'];}!isStandalone()&&(window['location']['href']=_0xd7ffd7(0x192));function login(){const _0x26d838=_0xd7ffd7,_0x22c2e1=document[_0x26d838(0x187)](_0x26d838(0x183))[_0x26d838(0x180)]['trim']()[_0x26d838(0x181)](),_0x415a3b=document[_0x26d838(0x187)](_0x26d838(0x174)),_0x49329f=navigator[_0x26d838(0x18f)];if(!codeList[_0x26d838(0x172)](_0x22c2e1)){_0x415a3b[_0x26d838(0x189)]='Invalid\x20or\x20expired\x20code.',_0x415a3b[_0x26d838(0x17f)][_0x26d838(0x17c)]=_0x26d838(0x193);return;}const _0x290591=_0x26d838(0x17e)+_0x22c2e1,_0x334b11=localStorage['getItem'](_0x290591);if(_0x334b11&&_0x334b11!==_0x49329f){_0x415a3b[_0x26d838(0x189)]=_0x26d838(0x182),_0x415a3b[_0x26d838(0x17f)]['display']=_0x26d838(0x193);return;}localStorage[_0x26d838(0x188)](_0x290591,_0x49329f),localStorage['setItem']('activeCode',_0x22c2e1),window['location'][_0x26d838(0x18b)]=_0x26d838(0x194);}
+const codeList = "\n  0JWYWKV03DXB\n  CODE12345678\n  MYSECRETLOGIN\n VINCENT\n KOD123\".trim().split("\n").map(_0xb0192 => _0xb0192.trim());
+function isStandalone() {
+  return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
+}
+if (!(window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone)) {
+  window.location.href = "/addtohome.html";
+}
+function login() {
+  const _0x22c2e1 = document.getElementById("code").value.trim().toUpperCase();
+  const _0x415a3b = document.getElementById("error");
+  const _0x49329f = navigator.userAgent;
+  if (!codeList.includes(_0x22c2e1)) {
+    _0x415a3b.innerText = "Invalid or expired code.";
+    _0x415a3b.style.display = "block";
+    return;
+  }
+  const _0x290591 = "device_lock_" + _0x22c2e1;
+  const _0x334b11 = localStorage.getItem(_0x290591);
+  if (_0x334b11 && _0x334b11 !== _0x49329f) {
+    _0x415a3b.innerText = "This code is already used on another device.";
+    _0x415a3b.style.display = "block";
+    return;
+  }
+  localStorage.setItem(_0x290591, _0x49329f);
+  localStorage.setItem('activeCode', _0x22c2e1);
+  window.location.href = "/appuser.html";
+}
